@@ -1,0 +1,23 @@
+import random
+
+#This gives the Producer some Premise Cards-- two will need to be chosen and the rest discarded later on.
+
+p=open("premise.txt", "r+")
+pdeck=(p.readlines())
+random.shuffle(pdeck)
+p.close()
+hand = []
+for i in range (0, 5):
+  hand.append(pdeck.pop())
+print (hand)
+
+#These are your title cards, each player gets an instance of this, They choose 1-4, keep the rest, draw to 10 next round.
+
+t=open("title.txt", "r+")
+tdeck=(t.readlines())
+random.shuffle(tdeck)
+t.close()
+thand=[]
+for i in range (0, 10):
+    thand.append(tdeck.pop())
+print(thand)
