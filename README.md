@@ -1,0 +1,2 @@
+# NetworkAlpha
+Cardgame implementation
